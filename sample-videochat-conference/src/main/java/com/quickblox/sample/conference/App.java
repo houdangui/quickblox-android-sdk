@@ -1,6 +1,7 @@
 package com.quickblox.sample.conference;
 
 import com.crashlytics.android.Crashlytics;
+import com.quickblox.conference.ConferenceConfig;
 import com.quickblox.sample.core.CoreApp;
 import com.quickblox.sample.conference.util.QBResRequestExecutor;
 
@@ -19,6 +20,7 @@ public class App extends CoreApp {
         super.onCreate();
         Fabric.with(this, new Crashlytics());
         initApplication();
+        ConferenceConfig.setUrl(qbConfigs.getJanusServerUrl());
     }
 
     private void initApplication(){

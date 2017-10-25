@@ -30,6 +30,9 @@ public class QbConfigs implements Serializable{
     @SerializedName("gcm_sender_id")
     private String gcmSenderId;
 
+    @SerializedName("janus_server_url")
+    private String janusServerUrl;
+
 
     public String getAppId() {
         return appId;
@@ -85,6 +88,14 @@ public class QbConfigs implements Serializable{
 
     public void setGcmSenderId(String gcmSenderId) {
         this.gcmSenderId = gcmSenderId;
+    }
+
+    public String getJanusServerUrl() {
+        return janusServerUrl;
+    }
+
+    public void setJanusServerUrl(String janusServerUrl) {
+        this.janusServerUrl = janusServerUrl;
     }
 
 }
